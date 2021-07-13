@@ -1,8 +1,6 @@
-Here's the demo project of Texture issue:
+Here's the demo project of [Texture issue #2016](https://github.com/TextureGroup/Texture/issues/2016): Cell selection not visible after setting ASCellNode backgroundColor on iOS 13 or later.
 
 ![Results on iOS 12-14](Texture_issue.png)
-
-Cell selection not visible after setting ASCellNode backgroundColor on iOS 13 or later.
 
 When setting backgroundColor of ASCellNode, Texture has been setting backgroundColor on both `_ASDisplayView` (added on top of contentView) and underlying `_ASTableViewCell`.
 
