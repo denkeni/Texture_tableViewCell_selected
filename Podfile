@@ -6,6 +6,6 @@ target 'Texture_tableViewCell_selected' do
   use_frameworks!
 
   # Pods for Texture_tableViewCell_selected
-  pod 'Texture'
+  pod 'Texture', :git => 'https://github.com/TextureGroup/Texture', :branch => 'master'
 
 end

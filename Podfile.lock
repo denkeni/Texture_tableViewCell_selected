@@ -36,7 +36,7 @@ PODS:
     - Texture/Core
 
 DEPENDENCIES:
-  - Texture (from `https://github.com/TextureGroup/Texture/`, commit `03e7d1f`)
+  - Texture (from `https://github.com/TextureGroup/Texture`, branch `master`)
 
 SPEC REPOS:
   trunk:
@@ -46,13 +46,13 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   Texture:
-    :commit: 03e7d1f
-    :git: https://github.com/TextureGroup/Texture/
+    :branch: master
+    :git: https://github.com/TextureGroup/Texture
 
 CHECKOUT OPTIONS:
   Texture:
-    :commit: 03e7d1f
-    :git: https://github.com/TextureGroup/Texture/
+    :commit: 03e7d1fabd7568b611ea48eecb18332a7498a683
+    :git: https://github.com/TextureGroup/Texture
 
 SPEC CHECKSUMS:
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
@@ -60,6 +60,6 @@ SPEC CHECKSUMS:
   PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
   Texture: 41ce7d2fdff193a45cc8cfa3c254115cf776068a
 
-PODFILE CHECKSUM: e5ba81a9325e1d060161b2cc147d6bc0728b2b69
+PODFILE CHECKSUM: b88626d16694cc0329ccc6454ca6b769cc9b6f48
 
 COCOAPODS: 1.10.1

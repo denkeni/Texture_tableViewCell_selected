@@ -21,8 +21,7 @@ final class ViewController: UIViewController {
         if #available(iOS 13.0, *) {
             separatorLabel.backgroundColor = .systemGroupedBackground
         } else {
-            separatorLabel.textColor = .white
-            separatorLabel.backgroundColor = .systemGray
+            separatorLabel.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.96, alpha: 1.00)   // #F1F1F6
         }
         separatorLabel.text = "👇🏻ASTableNode"
         separatorLabel.textAlignment = .center
@@ -96,9 +95,9 @@ extension ViewController: ASTableDataSource {
 
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
         let nodeBlock: ASCellNodeBlock = {
-            let node = CellNode()
-            node.backgroundColor = .systemTeal  // will also be used to set _ASTableViewCell.backgroundColor
-            return node
+            let cellNode = CellNode()
+            cellNode.backgroundColor = .systemTeal  // will also be used to set _ASTableViewCell.backgroundColor
+            return cellNode
         }
         return nodeBlock
     }
@@ -109,7 +108,7 @@ extension ViewController: ASTableDataSource {
 extension ViewController: ASTableDelegate {
 
     func tableNode(_ tableNode: ASTableNode, willDisplayRowWith node: ASCellNode) {
-        guard let node = node as? CellNode, let indexPath = node.indexPath else { return }
+        guard let cellNode = node as? CellNode, let indexPath = cellNode.indexPath else { return }
         var attributes = [NSAttributedString.Key : Any]()
         attributes[.font] = UIFont.preferredFont(forTextStyle: .body)
         if #available(iOS 13.0, *) {
@@ -117,14 +116,13 @@ extension ViewController: ASTableDelegate {
         }
         switch indexPath.row {
         case 1:
-            node.textNode.attributedText = NSAttributedString(string: "1: Selected",
+            cellNode.textNode.attributedText = NSAttributedString(string: "1: Selected",
                                                               attributes: attributes)
-            node.isSelected = true
+            cellNode.isSelected = true
         default:
-            node.textNode.attributedText = NSAttributedString(string: "0",
+            cellNode.textNode.attributedText = NSAttributedString(string: "0",
                                                               attributes: attributes)
-            node.isSelected = false
-            
+            cellNode.isSelected = false
         }
     }
 }
